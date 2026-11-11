@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="lo">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ລະບົບ Login & Register</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <div class="container">
+        <!-- ຟອມເຂົ້າສູ່ລະບົບ ແລະ ລົງທະບຽນ -->
+        <div id="auth-box" class="card">
+            <h2 id="form-title">ເຂົ້າສູ່ລະບົບ</h2>
+            <div id="alert" class="alert hidden"></div>
+
+            <form id="auth-form">
+                <div class="form-group">
+                    <label for="username">Username</label>
+                    <input type="text" id="username" required autocomplete="off">
+                </div>
+                <div class="form-group">
+                    <label for="password">Password</label>
+                    <input type="password" id="password" required>
+                </div>
+                <button type="submit" id="submit-btn">Login</button>
+            </form>
+
+            <p class="toggle-text">
+                <span id="toggle-desc">ຍັງບໍ່ມີບັນຊີບໍ?</span>
+                <a href="#" id="toggle-link">ລົງທະບຽນທີ່ນີ້</a>
+            </p>
+        </div>
+
+        <!-- ໜ້າ Dashboard ເມື່ອ Login ສຳເລັດ -->
+        <div id="dashboard-box" class="card hidden">
+            <h2>ຍິນດີຕ້ອນຮັບ!</h2>
+            <p>ສະບາຍດີ, <strong id="user-display"></strong></p>
+            <button id="logout-btn" class="btn-logout">Logout</button>
+        </div>
+    </div>
+
+    <script src="/static/script.js"></script>
+</body>
+</html>
